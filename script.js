@@ -8,19 +8,19 @@ function setLanguage(lang) {
     document.getElementById('github-text').innerHTML = translations[lang].githubText;
     document.getElementById('knowledge-text').innerText = translations[lang].knowledge;
 
-    // Update navigation text
+   
     const navLinks = document.querySelectorAll('nav a');
     navLinks[0].innerText = translations[lang].about;
     navLinks[1].innerText = translations[lang].skills;
     navLinks[2].innerText = translations[lang].contact;
 }
 
-// Add event listener when DOM is loaded
+
 document.addEventListener('DOMContentLoaded', function() {
-    // Set initial language to German
+   
     setLanguage('de');
 
-    // Add event listener for language dropdown
+   
     const languageSelect = document.querySelector('#language-dropdown select');
     languageSelect.addEventListener('change', function() {
         setLanguage(this.value);
