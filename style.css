@@ -1,0 +1,245 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Roboto Mono', monospace; 
+    background-color: #f9f9f9;
+    line-height: 1.6; 
+}
+
+body, h1, h2, h3, p, a {
+    color: white;
+    font-style: italic;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 1rem; 
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(5px); 
+}
+
+nav a {
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    padding: 0.5rem 1rem;
+}
+
+nav a:hover {
+    text-decoration: underline;
+    opacity: 0.8;
+}
+
+#language-dropdown {
+    position: fixed;
+    right: 20px;
+    top: 15px;
+    z-index: 1100;
+}
+
+#language-dropdown select {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    border: none;
+    font-size: 1em;
+    padding: 0.5rem; 
+    cursor: pointer;
+    border-radius: 4px;
+    transition: all 0.3s ease; 
+}
+
+#language-dropdown select:hover {
+    background-color: rgba(0, 0, 0, 0.9); 
+}
+
+.hero, #about-me, #skills, #contact {
+    min-height: 100vh;
+    padding: 4rem 2rem; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    position: relative; 
+}
+
+.hero > *, #about-me > *, #skills > *, #contact > * {
+    position: relative;
+    z-index: 2; 
+}
+
+.hero {
+    background-image: url('assets/hero-image.jpg');
+}
+
+#about-me, #contact {
+    background-image: url('assets/back2.jpg');
+}
+
+#skills {
+    background-image: url('assets/back.jpg');
+}
+
+/* Updated profile picture style with enhanced glow effect */
+.profile-pic {
+    width: 17%;
+    height: 2%;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 2rem;
+    border: 4px solid white;
+    box-shadow: 
+        0 0 20px rgba(255, 255, 255, 0.5),
+        0 0 0 8px rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+    animation: glowPulse 3s infinite alternate;
+}
+
+@keyframes glowPulse {
+    from {
+        box-shadow: 
+            0 0 20px rgba(255, 255, 255, 0.5),
+            0 0 0 8px rgba(255, 255, 255, 0.2);
+    }
+    to {
+        box-shadow: 
+            0 0 25px rgba(255, 255, 255, 0.7),
+            0 0 0 12px rgba(255, 255, 255, 0.3);
+    }
+}
+
+.profile-pic:hover {
+    transform: scale(1.05);
+    box-shadow: 
+        0 0 30px rgba(255, 255, 255, 0.8),
+        0 0 0 12px rgba(255, 255, 255, 0.4);
+}
+
+.skills-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin: 2rem 0;
+    width: 100%;
+    max-width: 1200px; 
+}
+
+.skill-category {
+    text-align: center;
+    min-width: 200px;
+    flex: 1;
+    padding: 1rem;
+    background-color: rgba(0,0,0,0.4);
+    border-radius: 8px; 
+    backdrop-filter: blur(5px);
+}
+
+.skill-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.skill-logo {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    transition: transform 0.3s ease; 
+}
+
+.skill-logo:hover {
+    transform: scale(1.1); 
+}
+
+.larger-logo {
+    width: 80px;
+    height: 80px;
+}
+
+.knowledge-text, #github-text {
+    text-shadow: 2px 2px 4px black;
+    text-align: center;
+    margin: 2rem 0;
+    font-style: italic;
+    max-width: 800px;
+    background-color: rgba(0,0,0,0.3);
+    padding: 1rem;
+    border-radius: 8px;
+    backdrop-filter: blur(3px);
+}
+
+a {
+    text-decoration: underline;
+    transition: all 0.3s ease;
+}
+
+a:hover {
+    text-decoration: none;
+    opacity: 0.8;
+}
+
+/* Updated footer text style for better readability */
+.footer-text {
+    color: rgb(3, 3, 3);
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px 20px;
+    border-radius: 5px;
+    backdrop-filter: blur(5px);
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .skills-container {
+        gap: 1rem;
+    }
+    
+    .skill-category {
+        min-width: 150px;
+    }
+}
+
+@media (max-width: 480px) {
+    .profile-pic {
+        width: 150px;
+        height: 150px;
+    }
+    
+    .skill-logo {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .larger-logo {
+        width: 70px;
+        height: 70px;
+    }
+}
+
+.social-links{
+    background-color: black;
+}

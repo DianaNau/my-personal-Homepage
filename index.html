@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <!-- Character Set and Viewport -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Diana Nau - Personal Portfolio and Professional Profile">
+    <meta name="keywords" content="web development, frontend, backend, portfolio">
+    <meta name="author" content="Diana Nau">
+    
+    <!-- Social Media Meta Tags -->
+    <meta property="og:title" content="Diana Nau - Personal Homepage">
+    <meta property="og:description" content="Professional portfolio and skills showcase">
+    <meta property="og:image" content="assets/pro.jpg">
+    <meta property="og:type" content="website">
+    
+    <!-- Page Title -->
+    <title>Diana Nau - Persönliche Homepage</title>
+    
+    <!-- Preconnect to External Resources -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg" href="./assets/logo3.jpg">
+ 
+  
+    
+   
+</head>
+<body>
+    <div id="language-dropdown">
+        <select onchange="setLanguage(this.value)" aria-label="Change language">
+            <option value="de" selected>Deutsch</option>
+            <option value="en">English</option>
+            <option value="ro">Română</option>
+        </select>
+    </div>
+
+    <nav role="navigation" aria-label="Main navigation">
+        <a href="#about-me" aria-label="About Me Section">Über mich</a>
+        <a href="#skills" aria-label="Skills Section">Skillset</a>
+        <a href="#contact" aria-label="Contact Section">Kontakt</a>
+    </nav>
+
+    <header class="hero">
+        <img src="assets/pro.jpg" alt="Profilfoto von Diana" class="profile-pic" loading="lazy">
+        <h1 id="welcome">Willkommen zu meiner persönlichen Homepage.</h1>
+    </header>
+    
+    <main>
+        <section id="about-me">
+            <h2 id="about-title">Über mich</h2>
+            <p id="about-text">Hallo, ich bin Diana Naumovic, eine angehende Anwendungsentwicklerin mit einer großen Leidenschaft für kreative Lösungen und die digitale Welt. Aktuell absolviere ich eine Umschulung zur Fachinformatikerin für Anwendungsentwicklung und freue mich darauf, mein Wissen in spannenden Projekten anzuwenden. In meiner Freizeit entdecke ich gerne neue Tools und arbeite an eigenen Ideen, um mich kontinuierlich weiterzuentwickeln.
+
+            </p>
+        </section>
+
+        <section id="skills">
+            <h2 id="skills-title">Skillset</h2>
+            <div class="skills-container">
+                <div class="skill-category">
+                    <h3>Frontend</h3>
+                    <ul class="skill-list">
+                        <li><img src="assets/JS.jpg" alt="JavaScript Logo" class="skill-logo" loading="lazy"></li>
+                        <li><img src="assets/css.jpg" alt="CSS Logo" class="skill-logo" loading="lazy"></li>
+                        <li><img src="assets/Html.jpg" alt="HTML Logo" class="skill-logo" loading="lazy"></li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Backend</h3>
+                    <ul class="skill-list">
+                        <li><img src="assets/python.png" alt="Python Logo" class="skill-logo larger-logo" loading="lazy"></li>
+                        <li><img src="assets/R.jpg" alt="R Logo" class="skill-logo larger-logo" loading="lazy"></li>
+                    </ul>
+                </div>
+            </div>
+            <p id="knowledge-text" class="knowledge-text">Extending my knowledge every day.</p>
+            <p id="github-text">Ein Blick hinter die Kulissen. In meinem <a href="https://github.com/DianaNau" target="_blank" rel="noopener noreferrer">GitHub-Repository</a> findest du eine Sammlung kleiner Projekte, an denen ich in meiner Freizeit gearbeitet habe.</p>
+        </section>
+
+        <section id="contact">
+            <h2 id="contact-title">Kontakt</h2>
+            <p id="contact-text">Für Fragen, Anregungen oder Kooperationsmöglichkeiten stehe ich gerne zur Verfügung. Kontaktiere mich unter <a href="mailto:d.naumovic@outlook.de">d.naumovic@outlook.de</a></p>
+        </section>
+    </main>
+
+    <footer>
+        <div class="social-links">
+            <a href="https://github.com/DianaNau" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile">
+                GitHub
+            </a> 
+            <p>© 2025 Diana Naumovic. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="translation.js"></script>
+    <script src="script.js" defer></script>
+</body>
+</html>
