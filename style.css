@@ -88,14 +88,14 @@ nav a:hover {
 }
 
 #about-me, #contact {
-    background-image: url('assets/back2.jpg');
+    background-image: url("../assets/back2.jpg");
 }
 
 #skills {
     background-image: url('assets/back.jpg');
 }
 
-/* Updated profile picture style with enhanced glow effect */
+
 .profile-pic {
     width: 17%;
     height: 2%;
