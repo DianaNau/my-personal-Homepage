@@ -88,7 +88,7 @@ nav a:hover {
 }
 
 #about-me, #contact {
-    background-image: url("../assets/back2.jpg");
+    background-image: url('assets/back2.jpg');
 }
 
 #skills {
@@ -197,7 +197,7 @@ a:hover {
     opacity: 0.8;
 }
 
-/* Updated footer text style for better readability */
+
 .footer-text {
     color: rgb(3, 3, 3);
     text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8);
