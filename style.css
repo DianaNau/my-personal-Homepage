@@ -88,7 +88,7 @@ nav a:hover {
 }
 
 #about-me, #contact {
-    background-image: url('assets/back2.jpg');
+    background-color: black;
 }
 
 #skills {
